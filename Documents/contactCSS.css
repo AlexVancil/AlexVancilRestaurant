@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
+
+body{
+    margin: 0;
+}
+
+nav{
+    border-bottom: 8px double #751a1a;
+    background-color: #fdffec;
+    padding: 1em;
+}
+nav img{
+    max-width: 300px;
+    position: absolute;
+    margin-left: -5em;
+    filter: brightness(.9);
+    transition: all .2s ease;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav a, nav li{
+    text-decoration: none;
+    list-style: none;
+    font-family: "Sen";
+    color: #751a1a;
+
+    font-size: 1.2em;
+
+    transition: scale .2s ease;
+}
+.linkscale:hover{
+    scale: 110%;
+    transition: scale .2s ease;
+}
+nav img:hover{
+    scale: 105%;
+    filter: brightness(1);
+    transition: all .2s ease;
+}
+
+.intro, h2{
+    justify-content: center;
+    display: flex;
+    color: #751a1a;
+    font-family:'Balthazar';
+    font-size: 1.5em;
+}
+
+main{
+    background: linear-gradient(#f2f2d5,#dbdbb8);
+    margin: 0;
+    padding-bottom: 20em;
+}
+.socials img{
+    width: 30px;
+}
+p, li{
+    color: #751a1a;
+    font-family:'sen';
+    font-size: 1.5em;
+}
+.contact2 ul{
+    display: flex;
+    justify-content: space-between;
+    max-width: 40%;
+}
+.contact2 li{
+    list-style: none;
+}
+
+.contactinfo{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+}
+.graphic{
+    width: 70%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.contact1{
+    width: 60%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+}
+.contact2{
+    width: 60%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+footer{
+    margin: -3em;
+    padding: 1em;
+    background-color: #751a1a;
+    display: flex;
+    justify-content: center;
+}
+footer p{
+    text-decoration: none;
+    list-style: none;
+    font-family: "Sen";
+    color: #ffffe6;
+    font-size: 1.2em;
+}
+.heart2{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+}
+@media (max-width: 1200px){
+    .nav_big{
+        display: none;
+    }
+    .hamburger{
+        display:flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .nav_small{
+        display: block;
+        position: absolute;
+        right: 1%;
+        top: 140px;
+        background-color: #fdffec;
+        border-bottom: 8px double #751a1a;
+        border-left: 8px double #751a1a;
+        border-right: 8px double #751a1a;
+        z-index: 3;
+
+        display: none;
+    }
+    .nav_small li{
+        padding: 1em;
+        max-width: max-content;
+    }
+    .nav_small li:hover{
+        scale: 110%;
+    }
+    .logo{
+        width: 1000px;
+        position: static;
+        margin: auto;
+    }
+    .menu_activate{
+        background: url('../Assets/Icon_Menu.svg');
+        width: 100px;
+        height: 100px;
+        transition: scale .1s ease-in-out;
+    }
+    .menu_activate:hover{
+        scale: 105%;
+        transition: scale .1s ease-in-out;
+    }
+    .menu_activate:active{
+        scale: 95%;
+        transition: scale .1s ease-in-out;
+    }
+    input{
+        appearance: none;
+    }
+    .menu_activate:has(input:checked) + .nav_small{
+        overflow: hidden;
+        display: block;
+    }
+    .contactinfo{
+        display: block;
+    }
+    .heart1{
+        display: none;
+    }
+    .heart2{
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+    .contact1, .contact2{
+        margin: 0 auto;
+    }
+    .contact2 ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    footer p{
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hamburger{
+        display: grid;
+        justify-content: center;
+    }
+    .menu_activate{
+        margin: 0 auto;
+    }
+    .logo{
+        width: 500px;
+    }
+    .nav_small{
+        position: absolute;
+        top: 200px;
+        right: 0%;
+        width: 100vw;
+        border-left: none;
+        border-right: none;
+    }
+    .nav_small li{
+        padding: 1em;
+        max-width: max-content;
+        margin: 0 auto;
+    }
+    .contact1{
+        width: 100vw;
+    }
+    .contact2{
+        margin: 0 auto;
+        display: block;
+        width: 100vw;
+    }
+    .contact2 p{
+        text-align: center;
+    }
+    .contact2 ul{
+        margin: 0 auto;
+    }
+}

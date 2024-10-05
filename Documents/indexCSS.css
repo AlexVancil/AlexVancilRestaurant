@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
+
+body{
+    margin: 0;
+}
+
+nav{
+    border-bottom: 8px double #751a1a;
+    background-color: #fdffec;
+    padding: 1em 1em 3em 1em;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav a, nav li{
+    text-decoration: none;
+    list-style: none;
+    font-family: "Sen";
+    color: #751a1a;
+
+    font-size: 1.2em;
+
+    transition: scale .2s ease;
+}
+nav li:hover{
+    scale: 110%;
+    transition: scale .2s ease;
+}
+
+main{
+    background: linear-gradient(#2e201c,#120d0b);
+    padding-bottom: 5em;
+}
+.logoanimate{
+    display: flex;
+    justify-content: center;
+}
+.mainlogo{
+    animation: logoappear 2s ease forwards;
+}
+@keyframes logoappear{
+    0%{
+        opacity: 0%;
+        width: 90em;
+    }
+    50%{
+        opacity: 100%;
+        width: 100em;
+        position: relative;
+        bottom: 0em;
+    }
+    100%{
+        width: 30em;
+        position: relative;
+        bottom: 3em;
+    }
+
+}
+.tagline{
+    display: flex;
+    justify-content: center;
+    margin-top: -1em;
+    animation: wordsappear 2.5s ease forwards;
+    color: white;
+    font-family: "Balthazar", serif;
+    font-weight: lighter;
+    font-size: 2em;
+  }
+
+@keyframes wordsappear{
+    0%{
+        display: none;
+        opacity: 0%;
+    }
+    75%{
+        display: none;
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.badge{
+    padding-bottom: 8em;
+}
+
+h2{
+    font-size: 3em;
+    color: #751a1a;
+    font-family: "Balthazar", serif;
+    font-weight: lighter;
+}
+p{
+    font-size: 1.5em;
+    color: #751a1a;
+    font-family: "Sen";
+    font-weight: lighter;
+}
+.intro{
+    display: grid;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+.intro h2{
+    font-size: 3em;
+    color:#fdffec;
+    font-family: "Balthazar", serif;
+    text-align: center;
+}
+.intro p{
+    font-size: 1.5em;
+    color:#fdffec;
+    font-family: "sen";
+    text-align: center;
+}
+
+.ann_item{
+    display: flex;
+    justify-content: center;
+    padding: 2em 0em 2em 0em;
+}
+.ann_img{
+    border-radius: 10%;
+    width: 500px;
+    height: auto;
+    border: 10px solid #fdffec;
+    filter: brightness(.8);
+    transition: all .2s ease-in-out;
+    z-index: 2;
+}
+.ann_img:hover{
+    scale: 105%;
+    filter: brightness(1);
+    transition: all .2s ease-in-out;
+}
+.item_text_left{
+    position: relative;
+    right: 8em;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+.item_text_left:hover{
+    right:6em;
+    transition: all .3s ease-in-out;
+}
+
+.item_text_left h2, .item_text_left p{
+    background-color: #fdffec;
+    padding: 1em 1em 1em 10em;
+    border-radius: 3em;
+    max-width: 300px;
+}
+.item_text_left h2{
+    padding: .5em .5em .5em 3em;
+    text-align: right;
+}
+/*  */
+.item_text_right{
+    position: relative;
+    left: 10em;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+.item_text_right:hover{
+    left:8em;
+    transition: all .3s ease-in-out;
+}
+
+.item_text_right h2, .item_text_right p{
+    background-color: #fdffec;
+    padding: 1em 10em 1em 1em;
+    border-radius: 3em;
+    max-width: 300px;
+}
+.item_text_right h2{
+    padding: .5em 3em .5em .5em;
+    text-align: left;
+}
+footer{
+    margin: -3em;
+    padding-top: 1em;
+    background-color: #751a1a;
+}
+footer ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+footer li, footer a, footer p{
+    text-decoration: none;
+    list-style: none;
+    font-family: "Sen";
+    color: #ffffe6;
+    font-size: 1.2em;
+}
+.hamburger{
+    display: none;
+}
+@media (max-width: 1200px){
+    .nav_big{
+        display: none;
+    }
+    .hamburger{
+        display:flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .nav_small{
+        display: block;
+        position: absolute;
+        right: 1%;
+        top: 170px;
+        background-color: #fdffec;
+        border-bottom: 8px double #751a1a;
+        border-left: 8px double #751a1a;
+        border-right: 8px double #751a1a;
+        z-index: 3;
+
+        display: none;
+    }
+    .nav_small li{
+        padding: 1em;
+        max-width: max-content;
+    }
+    .nav_small li:hover{
+        scale: 110%;
+    }
+    .logo_small{
+        width: 300px;
+        position: static;
+        margin: auto;
+    }
+    .menu_activate{
+        background: url('../Assets/Icon_Menu.svg');
+        width: 100px;
+        height: 100px;
+        transition: scale .1s ease-in-out;
+    }
+    .menu_activate:hover{
+        scale: 105%;
+        transition: scale .1s ease-in-out;
+    }
+    .menu_activate:active{
+        scale: 95%;
+        transition: scale .1s ease-in-out;
+    }
+    input{
+        appearance: none;
+    }
+    .menu_activate:has(input:checked) + .nav_small{
+        overflow: hidden;
+        display: block;
+    }
+    .ann_item{
+        display: grid;
+        justify-content: center;
+    }
+
+    .item_text_left h2,
+    .item_text_right h2,
+    .item_text_left p,
+    .item_text_right p{
+        padding: 1em;
+        max-width: 100%;
+        text-align: center;
+    }
+    .ann_item{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        width: 100%;
+        height: 600px;
+        padding-bottom: 300px;
+    }
+
+    .item_text_left, .item_text_right{
+        position: static;
+        max-width: 100%;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .ann_img{
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    footer ul{
+        width: 80%;
+        justify-content: center;
+    }
+    footer li{
+        font-size: 1em;
+        padding: 1.5em;
+        max-width: 200px;
+    }
+    footer a{
+        padding: .5em;
+        border: solid 3px #dbdbb8;
+        border-radius: 2em;
+    }
+}
+
+@media (max-width: 600px) {
+    .hamburger{
+        display: grid;
+        justify-content: center;
+    }
+    .menu_activate{
+        margin: 0 auto;
+    }
+    .logo{
+        width: 500px;
+    }
+    .nav_small{
+        position: absolute;
+        top: 200px;
+        right: 0%;
+        width: 100vw;
+        border-left: none;
+        border-right: none;
+    }
+    .nav_small li{
+        padding: 1em;
+        max-width: max-content;
+        margin: 0 auto;
+    }
+
+    .intro{
+        width: 95%;
+    }
+}

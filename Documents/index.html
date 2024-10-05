@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandad's Restaraunt</title>
+    <link href="./indexCSS.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <label class="nav_big">
+            <ul class="nav">
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./location.html">Location</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./staff.html">Meet the Staff</a></li>
+            </ul>
+        </label>
+        <div class="hamburger">
+            <a href="./index.html"><img class="logo_small" src="../Assets/RestarauntLogo.svg" alt="Hamburger Menu"></a>
+            <label class="menu_activate">
+                <input type="checkbox">       
+            </label>
+            <ul class="nav_small">
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./location.html">Location</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="badge nav_big">
+            <div class="logoanimate">
+                <img class="mainlogo" src="../Assets/RestarauntLogo.svg" alt="Restaurant logo, an oval with a fork and a spoon that says Grandads.">
+            </div>
+           <h2 class="tagline">"Family-made for family like you"</h2>    
+        </section>
+
+        <section class="intro">
+            <h2>Welcome to Grandad's!</h2>
+            <p>Grandad's is a cozy, family restaraunt started in memory of Kenneth Vancil, or Grandad. With the help of Chef
+                Cookie Cutter, we hope you stay a while and fill up your stomach!
+            </p>
+        </section>
+
+        <section class="announcements">
+            <div class="ann_item">
+                <img class="ann_img" src="../Assets/Announcement_Cake.jpg" alt="A birthday cake with candles in a dark room.">
+                <div class="item_text_left">
+                    <h2>Happy Birthday dear Grandad!</h2>
+                    <p>In celebration of Grandad's birthday, desserts are 50% off for the month of October!</p>
+                </div>
+            </div>
+            <div class="ann_item">
+                <div class="item_text_right">
+                    <h2>Game Night!</h2>
+                    <p>Grandad's just got a whole new catalogue of fun family games to play. Plan your next board game night here!</p>
+                </div>
+                <img class="ann_img" src="../Assets/Announcement_Games.jpg" alt="A family playing a board game together.">
+            </div>
+            <div class="ann_item">
+                <img class="ann_img" src="../Assets/Announcement_Food.jpg" alt="A pot of steaming potato soup in a kitchen.">
+                <div class="item_text_left">
+                    <h2>Something's Brewing...</h2>
+                    <p>With fall just around the corner, try our new warm potato stew!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">Back to Top</a></li>
+            <li><p>Grandad's Country Restaraunt &copy; 2024 All rights Reserved</p></li>
+        </ul>
+    </footer>
+</body>
+</html>
+
+<!-- Credits:
+    Hamburger bun skills learned from both MDN web Docs and the following links: 
+        https://www.sitepoint.com/community/t/checkbox-replacement-with-image/212853
+        https://www.youtube.com/watch?v=dAIVbLrAb_U 
+    Some SEO skills learned from https://youtu.be/-B58GgsehKQ?si=5a9zQenW7DN2BpJG
+    Cake photo from https://www.123rf.com/photo_91032119_birthday-cake-with-candle-light-in-the-dark-room.html
+    Board Game photo from https://stock.adobe.com/search?k=teens+playing+board+game
+    Pot photo from https://www.tastingtable.com/737326/mistakes-everyone-makes-when-steaming-food/
+    Appetizer photo from https://www.washingtonpost.com/recipes/toasted-ravioli/
+    Drink photo from https://en.wikipedia.org/wiki/Hot_chocolate
+    breakfast photo from https://insanelygoodrecipes.com/bob-evans-sausage-gravy/
+    lunch photo from https://www.inspiredtaste.net/62425/chicken-and-dumplings/
+    Platters photo from https://www.scandikitchen.co.uk/little-lessons-smorgasbord/
+    Dessert photo from https://www.mybakingaddiction.com/the-best-chocolate-cake/
+
+    Any code not taught in this class was either learned in my previous web design class or learned through MDN web docs. 
+    I did not take anyone else's code from the internet, but would look up if certain things were possible in CSS, then used that knowledge to write my own code. -->
+
+    <!-- I tried to go all out in this project by making it pretty dynamic to avoid it becoming boring. I discovered and implemented the 
+    "z-index" property, which, when used with different "position" properties, allow items to be overlapped in ways that aren't possible
+    by just using usual divs.
+    I added a few SEO tactics such as using a relevent title for the website in the head so that it catches the attention of people looking for restaurants.
+    I also made sure to include "alt" text on images so that the website is seen as reader-friendly and hopefully gets more clicks.
+    Finally, I tried to keep the retention time somewhat high by making the logo the first thing that people see, then when it shrinks
+    they see the rest of the site and get curious. -->
